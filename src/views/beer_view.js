@@ -63,10 +63,10 @@ BeerView.prototype.render = function (beer) {
   singleContainer.appendChild(beerImageDiv)
   singleContainer.appendChild(beerInfo)
 
+// And append to its own div
+this.element.appendChild(singleContainer)
+
   return singleContainer;
-
-
-
 
 };
 

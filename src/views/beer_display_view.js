@@ -19,6 +19,9 @@ BeerDisplay.prototype.render = function (allBeers) {
   allBeers.forEach((beer) => {
     const beerView = new BeerView(this.container, beer)
     // console.log(beerView);
+    this.container.addEventListener('onClick', (event) => {
+      const infoToggle = event.toggle();
+    })
     beerView.render();
   })
 };
