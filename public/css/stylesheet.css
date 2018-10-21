@@ -1,6 +1,14 @@
+body{
+  font-family: 'Cabin', sans-serif;
+}
+
+
 img {
   height: 150px;
   width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block
 }
 
 img#logo {
@@ -14,6 +22,10 @@ img#logo {
   /* position: absolute; */
   text-align: center;
   /* border: 2px dotted rgb(96, 139, 168); */
+}
+
+li {
+  list-style: none;
 }
 
 
@@ -34,4 +46,12 @@ img#logo {
 .flex>* {
   flex: 1 1 160px;
   margin: 10px;
-} */
+}
+
+div.beer-info {
+  text-align: center;
+}
+
+form#beer-form{
+  margin-bottom: 15px;
+}
