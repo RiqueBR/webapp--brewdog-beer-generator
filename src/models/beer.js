@@ -1,9 +1,10 @@
 const PubSub = require('../helpers/pub_sub.js')
 const Request = require('../helpers/request.js')
 
+
 const Beer = function (){
   this.data = []
-  this.beerList = []
+  // this.beerList = []
 }
 
 Beer.prototype.getData = function () {
@@ -16,15 +17,27 @@ Beer.prototype.getData = function () {
   })
 };
 
-Beer.prototype.toggle = function () {
-  const moreInfo = document.getElementById('#toggle-info')
-  if(moreInfo.style.display === "none"){
-    moreInfo.style.display === "block";
-  }else{
-    moreInfo.style.display === "none";
-  }
-};
+// Beer.prototype.toggle = function () {
+//   const moreInfo = document.getElementById('#toggle-info')
+//   if(moreInfo.style.display === "none"){
+//     moreInfo.style.display === "block";
+//   }else{
+//     moreInfo.style.display === "none";
+//   }
+// };
 
+Beer.prototype.bindEvents = function () {
+  PubSub.subscribe('BeerFormView:form-submitted', (event) => {
+    // let top = document.getElementById("top")
+    // let nested = document.getElementById("nested")
+    //
+    // let clear = top.removeChild("nested")
+
+    const tagline = event.detail;
+    const filtered = this.data.filter(beer => beer.tagline.indexOf(tagline) !== -1);
+    PubSub.publish('Beer:beer-display-ready', data)
+  })
+};
 
 
 

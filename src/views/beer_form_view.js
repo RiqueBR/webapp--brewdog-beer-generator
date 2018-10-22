@@ -6,10 +6,14 @@ const BeerFormView = function(element){
   this.element = element
 }
 
-Beer.prototype.bindEvents = function () {
-  this.data.addEventListener('submit', (event) => {
+BeerFormView.prototype.bindEvents = function () {
+  this.element.addEventListener('submit', (event) => {
+    event.preventDefault();
     const tagName = event.target['beer-input'].value;
     PubSub.publish('BeerFormView:form-submitted', tagName)
-    this.data.reset();
+    this.element.reset();
   })
 };
+
+
+module.exports = BeerFormView;
