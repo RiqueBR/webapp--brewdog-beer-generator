@@ -26,6 +26,7 @@ img#logo {
 
 li {
   list-style: none;
+  text-align: center;
 }
 
 
@@ -62,6 +63,16 @@ form#beer-form{
   margin-bottom: 15px;
 }
 
-p {
+
+
+p#more-info {
+  display: none;
+}
+
+p.show {
   display: block;
+}
+
+p.hide {
+  display: none;
 }

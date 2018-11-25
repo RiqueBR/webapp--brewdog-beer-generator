@@ -16,12 +16,19 @@ BeerDisplay.prototype.bindEvents = function () {
 };
 
 BeerDisplay.prototype.render = function (allBeers) {
+  this.container.innerHTML = " "
   allBeers.forEach((beer) => {
     const beerView = new BeerView(this.container, beer)
-    // console.log(beerView);
-    this.container.addEventListener('onClick', (event) => {
-      const infoToggle = event.toggle();
-    })
+    // this.container.addEventListener('click', (event) => {
+    //   // const moreInfo = document.getElementById('more-info')
+    //   // if(moreInfo.style.display === "none"){
+    //   //   moreInfo.style.display == "block";
+    //   // }else{
+    //   //   moreInfo.style.display == "none";
+    //   // }
+    //   console.log('hi');
+    // })
+
     beerView.render();
   })
 };
