@@ -41,13 +41,8 @@ BeerView.prototype.render = function (beer) {
 
 
   descriptionClick.addEventListener('click', (event) => {
-    const moreInfo = document.getElementById("toggle-info")
-    if(moreInfo.style.display === "none"){
-      moreInfo.style.display == "block";
-    }else{
-      moreInfo.style.display == "none";
-    }
-    console.log(this.beer.name);
+    console.log(descriptionInfo.classList);
+    descriptionInfo.classList.toggle('hide')
   })
   // wrap all info in the one div
   singleContainer.appendChild(beerImageDiv)
