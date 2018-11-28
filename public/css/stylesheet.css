@@ -63,8 +63,6 @@ form#beer-form{
   margin-bottom: 15px;
 }
 
-
-
 #toggle-info {
   display: none;
 }
@@ -75,4 +73,11 @@ p.show {
 
 p.hide {
   display: none;
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .right, .wrapper {
+    width:100%;
+  }
 }
