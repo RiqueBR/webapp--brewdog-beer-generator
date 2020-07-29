@@ -3,7 +3,6 @@ const Beer = require('./models/beer.js')
 const BeerFormView = require('./views/beer_form_view.js')
 
 document.addEventListener('DOMContentLoaded', () => {
-  // console.log('Javascript loaded');
 
   const beerFormView = document.querySelector('#beer-form')
   const beerForm = new BeerFormView(beerFormView)
